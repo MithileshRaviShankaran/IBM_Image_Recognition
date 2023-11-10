@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognition Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/115/516/small/abstract-futuristic-circuit-board-illustration-high-computer-technology-dark-blue-color-background-hi-tech-digital-technology-concept-free-vector.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        form {
+            margin: 20px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        label {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        label:hover {
+            background-color: #0056b3;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose an image</label>
+        <input type="file" id="file" name="file" accept="image/*" required>
+        <br><br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
